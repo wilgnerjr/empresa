@@ -13,7 +13,11 @@
 body{
     color: $Preto;
     background-color: $Branco;
+
 }
+
+// ==================NAV=======================
+
 .navigation{
     display: flex;
     align-items: center;
@@ -21,7 +25,7 @@ body{
     padding: 18px 40px;
     box-shadow: 0 0.1rem 0.5rem $Branco;
     width: 100%;
-    height: 60px;
+    height: 80px;
     background: $Branco;
     position: fixed;
     transition: 0.5s;
@@ -52,7 +56,7 @@ body{
         gap: 1rem;
         li{
             a{
-                color: $VermelhoEscuro;
+                color: $VermelhoAmarronzado;
                 font-size: 17px;
                 font-weight: 800;
                 transition: all 0.5s;
@@ -82,19 +86,94 @@ body{
         background-color: $VermelhoEscuro;
     }   
 }
+
+// ==================MAIN=======================
+
 main{
-    padding: 75px 10px 10px 10px;
+    padding: 100px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    .apresentacao{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        img{
+            margin: 8% auto;
+            width: 300px;
+            height: 300px;
+            border: 50%;
+        }
+        .textApresentacao{
+            width: 50%;
+            #efeito{
+                font-size: 2rem;
+                color: rgb(197, 0, 0);
+            }
+        }
+        .textApresentacao::after{
+            content: '|';
+            margin-left: 5px;
+            opacity: 1;
+            animation: pisca .5s infinite;
+        }
+        
+        @keyframes pisca {
+            0%,100% {
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }    
+        }
+    }
 }
+
+// =========================ANIMAÇÔES=====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:885px) {
     .navigation{
         display: flex;
         align-items: center;
         // justify-content: space-between;
         padding: 18px 20px;
+        ul{
+            li{
+                a{
+                    color: $Branco;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    &:hover{
+                        color: $VermelhoClaro;
+                        background-color: $Branco;
+                        border-radius: 8px;
+                        border-bottom: 1px solid $Vermelho;
+                    }
+                }
+            }
+        }
         .menu{
             position: absolute;
             left: 85%;
-            top: 10%;
+            top: 20%;
             display: block;
         }
         .logoMobile{
@@ -108,12 +187,12 @@ main{
     .nav-menu{
         position: fixed;
         right: -100%;
-        top: 60px;
+        top: 80px;
         width: 100%;
         padding: 40px;
         height: 100%;
         flex-direction: column;
-        background-color: $VermelhoRosado;
+        background-color: $VermelhoAmarronzado;
         gap: -10px;
         transition: all 0.3s;
     }
@@ -131,5 +210,12 @@ main{
     }
     .nav-item{
         margin: 16px 0;
+    }
+
+    // ==================MAIN=======================
+    main{
+        .apresentacao{
+            flex-direction: column;
+        }
     }
 }
