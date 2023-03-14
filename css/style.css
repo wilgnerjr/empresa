@@ -39,12 +39,12 @@ body {
 .navigation .logo {
   font-family: "Righteous", cursive;
   letter-spacing: 2px;
-  color: #ca0000;
+  color: #a30000;
   font-size: 1.9rem;
   font-weight: 200;
 }
 .navigation .logo span {
-  color: #ca0000;
+  color: #a30000;
 }
 .navigation ul {
   display: flex;
@@ -59,7 +59,7 @@ body {
   padding: 8px;
 }
 .navigation ul li a:hover {
-  color: #ca0000;
+  color: #a30000;
   border-bottom: 1px solid #640000;
 }
 .navigation .menu {
@@ -71,19 +71,20 @@ body {
   width: 30px;
   height: 2px;
   border-radius: 4px;
-  background-color: #ca0000;
+  background-color: #a30000;
   margin: 10px auto;
   transition: all 0.3s;
 }
 .navigation .menu .bar:nth-child(1),
 .navigation .bar:nth-child(3) {
-  background-color: #ca0000;
+  background-color: #a30000;
 }
 
 main {
   padding: 100px 10px 10px 10px;
   display: flex;
   flex-direction: column;
+  background-color: rgb(233, 233, 233);
 }
 main .apresentacao {
   display: flex;
@@ -117,6 +118,21 @@ main .apresentacao .textApresentacao::after {
     opacity: 0;
   }
 }
+main a .fa-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 2em;
+  color: green;
+  background-color: #fff;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 885px) {
   .navigation {
@@ -130,7 +146,7 @@ main .apresentacao .textApresentacao::after {
     padding: 5px;
   }
   .navigation ul li a:hover {
-    color: #ff0000;
+    color: #c90000;
     background-color: #fff;
     border-radius: 8px;
     border-bottom: 1px solid #ff3131;
