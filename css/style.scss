@@ -13,12 +13,12 @@
 body{
     color: $Preto;
     background-color: $Branco;
-
 }
 
 // ==================NAV=======================
 
 .navigation{
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,25 +90,33 @@ body{
 // ==================MAIN=======================
 
 main{
-    padding: 100px 10px 10px 10px;
+    height: 100%;
+    padding: 20px 10px 10px 10px;
     display: flex;
     flex-direction: column;
     background-color: rgb(233, 233, 233);
     .apresentacao{
+        width: 100%;
+        height: 100vh;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
-        img{
-            margin: 8% auto;
-            width: 300px;
-            height: 300px;
-            border: 50%;
+        justify-content: center;
+        gap: 3rem;
+        .logoApresentacao{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-top: 8px;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: $Branco;
         }
         .textApresentacao{
             width: 50%;
             #efeito{
                 font-size: 2rem;
-                color: rgb(197, 0, 0);
+                color: $Vermelho;
             }
         }
         .textApresentacao::after{
@@ -130,8 +138,8 @@ main{
     a{
         .fa-whatsapp{
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 15px;
+            right: 15px;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -142,11 +150,44 @@ main{
             display: flex;
             align-items: center;
             justify-content: center;
+            animation-name: animaWhatsApp;
+            animation-duration:2s;
+            animation-iteration-count: infinite;
         }
+    }
+
+    section{
+        width: 100%;
+        height: 100vh;
+    }
+    .empresa{
+        background-color: blue;
+    }
+    .servicos{
+        background-color: red;
+    }
+    .contato{
+        background-color: purple;
     }
 }
 
 // =========================ANIMAÇÔES=====================
+
+@keyframes animaWhatsApp {
+    0%{ 
+        color: green;
+        background: $Branco;
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+        color: $Branco;
+        background: green;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 
 
 
@@ -203,6 +244,7 @@ main{
         }
     }
     .nav-menu{
+        z-index: 300;
         position: fixed;
         right: -100%;
         top: 80px;
