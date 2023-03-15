@@ -13,7 +13,23 @@ body {
   background-color: #fff;
 }
 
-.navigation {
+header .estadoFuncionamento {
+  width: 200px;
+  position: absolute;
+  top: 80px;
+  left: calc(50% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-top: transparent;
+  background-color: rgb(255, 255, 255);
+  color: rgb(68, 68, 68);
+}
+header .navigation {
   z-index: 1;
   display: flex;
   align-items: center;
@@ -24,11 +40,13 @@ body {
   height: 80px;
   background: #fff;
   position: fixed;
+  top: 0;
   transition: 0.5s;
   border-bottom: 1px solid transparent;
   box-shadow: 0px 0px 10px #000;
+  opacity: 1;
 }
-.navigation .logoMobile {
+header .navigation .logoMobile {
   display: none;
   width: 50px;
   height: 50px;
@@ -37,37 +55,37 @@ body {
   background-position: center;
   background-size: cover;
 }
-.navigation .logo {
+header .navigation .logo {
   font-family: "Righteous", cursive;
   letter-spacing: 2px;
   color: #a30000;
   font-size: 1.9rem;
   font-weight: 200;
 }
-.navigation .logo span {
+header .navigation .logo span {
   color: #a30000;
 }
-.navigation ul {
+header .navigation ul {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.navigation ul li a {
+header .navigation ul li a {
   color: #640000;
   font-size: 17px;
   font-weight: 800;
   transition: all 0.5s;
   padding: 8px;
 }
-.navigation ul li a:hover {
+header .navigation ul li a:hover {
   color: #a30000;
   border-bottom: 1px solid #640000;
 }
-.navigation .menu {
+header .navigation .menu {
   cursor: pointer;
   display: none;
 }
-.navigation .menu .bar {
+header .navigation .menu .bar {
   display: block;
   width: 30px;
   height: 2px;
@@ -76,8 +94,8 @@ body {
   margin: 10px auto;
   transition: all 0.3s;
 }
-.navigation .menu .bar:nth-child(1),
-.navigation .bar:nth-child(3) {
+header .navigation .menu .bar:nth-child(1),
+header .navigation .bar:nth-child(3) {
   background-color: #a30000;
 }
 
@@ -94,6 +112,7 @@ main .apresentacao {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 3rem;
 }
 main .apresentacao .logoApresentacao {
@@ -107,10 +126,12 @@ main .apresentacao .logoApresentacao {
   background-color: #fff;
 }
 main .apresentacao .textApresentacao {
-  width: 50%;
+  width: 100%;
+  text-align: center;
+  height: 100px;
 }
 main .apresentacao .textApresentacao #efeito {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ff0000;
 }
 main .apresentacao .textApresentacao::after {
@@ -120,7 +141,10 @@ main .apresentacao .textApresentacao::after {
   animation: pisca 0.5s infinite;
 }
 @keyframes pisca {
-  0%, 100% {
+  0% {
+    opacity: 1;
+  }
+  100% {
     opacity: 1;
   }
   50% {
@@ -134,7 +158,7 @@ main a .fa-whatsapp {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  font-size: 2em;
+  font-size: 25px;
   color: green;
   background-color: #fff;
   border: 2px solid #000;
@@ -147,8 +171,8 @@ main a .fa-whatsapp {
 }
 main section {
   width: 100%;
-  height: 100vh;
-  padding: 20px;
+  height: 100%;
+  padding-top: 80px;
 }
 main section h2 {
   color: #000;
@@ -187,33 +211,36 @@ main .contato {
   }
 }
 @media (max-width: 885px) {
-  .navigation {
+  header .estadoFuncionamento {
+    left: 5%;
+  }
+  header .navigation {
     display: flex;
     align-items: center;
     padding: 18px 20px;
   }
-  .navigation ul li a {
+  header .navigation ul li a {
     color: #fff;
     margin-bottom: 5px;
     padding: 5px;
   }
-  .navigation ul li a:hover {
+  header .navigation ul li a:hover {
     color: #c90000;
     background-color: #fff;
     border-radius: 8px;
     border-bottom: 1px solid #ff0000;
   }
-  .navigation .menu {
+  header .navigation .menu {
     position: absolute;
     left: 85%;
     top: 20%;
     display: block;
   }
-  .navigation .logoMobile {
+  header .navigation .logoMobile {
     display: block;
     margin: 0 auto;
   }
-  .navigation .logo {
+  header .navigation .logo {
     display: none;
   }
   .nav-menu {
@@ -246,5 +273,8 @@ main .contato {
   }
   main .apresentacao {
     flex-direction: column;
+  }
+  main .apresentacao .textApresentacao #efeito {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

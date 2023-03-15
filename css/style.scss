@@ -16,74 +16,94 @@ body{
 }
 // =========================NAV===========================
 
-.navigation{
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 40px;
-    box-shadow: 0 0.1rem 0.5rem $Branco;
-    width: 100%;
-    height: 80px;
-    background: $Branco;
-    position: fixed;
-    transition: 0.5s;
-    border-bottom: 1px solid transparent;
-    box-shadow: 0px 0px 10px $Preto;
-    .logoMobile{
-        display: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: url('../img/LogoVermelhinho.png');
-        background-position: center;
-        background-size: cover;
-    }
-    .logo{
-        font-family: 'Righteous', cursive;
-        letter-spacing: 2px;
-        color: $VermelhoEscuro;
-        font-size: 1.9rem;
-        font-weight: 200;
-        span{
-            color: $VermelhoEscuro;
-        }
-    }
-    ul{
+header{
+    .estadoFuncionamento{
+        width: 200px;
+        position: absolute;
+        top: 80px;
+        left: calc((100% / 2) - 100px);
         display: flex;
         align-items: center;
-        gap: 1rem;
-        li{
-            a{
-                color: $VermelhoAmarronzado;
-                font-size: 17px;
-                font-weight: 800;
-                transition: all 0.5s;
-                padding: 8px;
-                &:hover{
-                    color: $VermelhoEscuro;
-                    border-bottom: 1px solid $VermelhoAmarronzado;
+        justify-content: center;
+        height: 20px;
+        border-radius: 0px 0px 10px 10px;
+        padding: 10px;
+        border: 1px solid black;
+        border-top: transparent;
+        background-color: rgb(255, 255, 255);
+        color: rgb(68, 68, 68);
+    }
+    .navigation{
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 40px;
+        box-shadow: 0 0.1rem 0.5rem $Branco;
+        width: 100%;
+        height: 80px;
+        background: $Branco;
+        position: fixed;
+        top: 0;
+        transition: 0.5s;
+        border-bottom: 1px solid transparent;
+        box-shadow: 0px 0px 10px $Preto;
+        opacity: 1;
+        .logoMobile{
+            display: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: url('../img/LogoVermelhinho.png');
+            background-position: center;
+            background-size: cover;
+        }
+        .logo{
+            font-family: 'Righteous', cursive;
+            letter-spacing: 2px;
+            color: $VermelhoEscuro;
+            font-size: 1.9rem;
+            font-weight: 200;
+            span{
+                color: $VermelhoEscuro;
+            }
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            li{
+                a{
+                    color: $VermelhoAmarronzado;
+                    font-size: 17px;
+                    font-weight: 800;
+                    transition: all 0.5s;
+                    padding: 8px;
+                    &:hover{
+                        color: $VermelhoEscuro;
+                        border-bottom: 1px solid $VermelhoAmarronzado;
+                    }
                 }
             }
         }
+        .menu{
+            cursor: pointer;
+            display: none;
+        }
+        .menu .bar{
+            display: block;
+            width: 30px;
+            height: 2px;
+            border-radius: 4px;
+            background-color: $VermelhoEscuro;
+            margin: 10px auto;
+            transition: all 0.3s;
+        }
+        .menu .bar:nth-child(1),
+        .bar:nth-child(3){
+            background-color: $VermelhoEscuro;
+        }   
     }
-    .menu{
-        cursor: pointer;
-        display: none;
-    }
-    .menu .bar{
-        display: block;
-        width: 30px;
-        height: 2px;
-        border-radius: 4px;
-        background-color: $VermelhoEscuro;
-        margin: 10px auto;
-        transition: all 0.3s;
-    }
-    .menu .bar:nth-child(1),
-    .bar:nth-child(3){
-        background-color: $VermelhoEscuro;
-    }   
 }
 
 // =========================MAIN==========================
@@ -100,6 +120,7 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         gap: 3rem;
         .logoApresentacao{
             display: flex;
@@ -112,9 +133,11 @@ main{
             background-color: $Branco;
         }
         .textApresentacao{
-            width: 50%;
+            width: 100%;
+            text-align: center;
+            height: 100px;
             #efeito{
-                font-size: 2rem;
+                font-size: 2.5rem;
                 color: $Vermelho;
             }
         }
@@ -126,7 +149,10 @@ main{
         }
         
         @keyframes pisca {
-            0%,100% {
+            0%{
+                opacity: 1;
+            }
+            100% {
                 opacity: 1;
             }
             50%{
@@ -142,7 +168,7 @@ main{
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            font-size: 2em;
+            font-size: 25px;
             color: green;
             background-color: $Branco;
             border: 2px solid $Preto;
@@ -157,8 +183,8 @@ main{
 
     section{
         width: 100%;
-        height: 100vh;
-        padding: 20px;
+        height: 100%;
+        padding-top: 80px;
         h2{
             color: $Preto;
             font-size: 2rem;
@@ -203,38 +229,44 @@ main{
 // ========================AREA MOBILE=====================
 
 @media (max-width:885px) {
-    .navigation{
-        display: flex;
-        align-items: center;
-        // justify-content: space-between;
-        padding: 18px 20px;
-        ul{
-            li{
-                a{
-                    color: $Branco;
-                    margin-bottom: 5px;
-                    padding: 5px;
-                    &:hover{
-                        color: $VermelhoClaro;
-                        background-color: $Branco;
-                        border-radius: 8px;
-                        border-bottom: 1px solid $Vermelho;
+    
+    header{
+        .estadoFuncionamento{
+            left: 5%;
+        }
+        .navigation{
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            padding: 18px 20px;
+            ul{
+                li{
+                    a{
+                        color: $Branco;
+                        margin-bottom: 5px;
+                        padding: 5px;
+                        &:hover{
+                            color: $VermelhoClaro;
+                            background-color: $Branco;
+                            border-radius: 8px;
+                            border-bottom: 1px solid $Vermelho;
+                        }
                     }
                 }
             }
-        }
-        .menu{
-            position: absolute;
-            left: 85%;
-            top: 20%;
-            display: block;
-        }
-        .logoMobile{
-            display: block;
-            margin: 0 auto;
-        }
-        .logo{
-            display: none;
+            .menu{
+                position: absolute;
+                left: 85%;
+                top: 20%;
+                display: block;
+            }
+            .logoMobile{
+                display: block;
+                margin: 0 auto;
+            }
+            .logo{
+                display: none;
+            }
         }
     }
     .nav-menu{
@@ -270,6 +302,11 @@ main{
     main{
         .apresentacao{
             flex-direction: column;
+            .textApresentacao{
+                #efeito{
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 }
