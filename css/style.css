@@ -46,10 +46,12 @@ header .navigation {
 header .navigation .estadoAberto {
   color: green;
   background-color: #fff;
+  border: green;
 }
 header .navigation .estadoFechado {
   color: red;
   background-color: #fff;
+  border: red;
 }
 header .navigation .teste {
   display: flex;
@@ -187,8 +189,8 @@ main a .fa-whatsapp {
 }
 main section {
   width: 100%;
-  height: 100%;
-  padding-top: 80px;
+  height: 100vh;
+  padding-top: 130px;
 }
 main section h2 {
   color: #000;
@@ -229,10 +231,10 @@ main .contato {
 @media (max-width: 885px) {
   header #mensagem {
     width: 55px;
-    height: 20px;
+    height: 30px;
     padding: 10px;
     position: absolute;
-    top: 30px;
+    top: 50px;
     left: 5%;
     display: flex;
     align-items: center;
@@ -240,13 +242,16 @@ main .contato {
     flex-direction: column;
     border-radius: 10px;
     font-size: 10px;
-    border: 1px solid black;
+    border: 1px solid;
     font-weight: 400;
   }
   header .navigation {
     display: flex;
     align-items: center;
     padding: 18px 20px;
+  }
+  header .navigation .teste p {
+    display: none;
   }
   header .navigation ul li a {
     color: #fff;
@@ -262,7 +267,7 @@ main .contato {
   header .navigation .menu {
     position: absolute;
     left: 85%;
-    top: 20%;
+    top: 30%;
     display: block;
   }
   header .navigation .logoMobile {
