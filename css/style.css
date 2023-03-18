@@ -122,7 +122,7 @@ main {
   padding: 60px 0px 0px 0px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(233, 233, 233);
+  background-color: transparent;
 }
 main .apresentacao {
   width: 100%;
