@@ -210,6 +210,7 @@ main section p {
 }
 main .empresa {
   background-color: #fff;
+  padding: 0 15px;
 }
 main .servicos {
   display: flex;
@@ -247,21 +248,15 @@ main .servicos .areaProdutos .produto div {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: url("https://ideiagraficaebrindes.com.br/wp-content/uploads/2021/08/crachapvc.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 main .servicos .areaProdutos .produto .produto1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background: url("https://cdn.atualcard.com.br/arquivos/menu/normais/cartao-de-visita-250g-487x296-.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("https://cdn.atualcard.com.br/arquivos/menu/normais/cartao-de-visita-250g-487x296-.png");
+}
+main .servicos .areaProdutos .produto .produto2 {
+  background-image: url("https://ideiagraficaebrindes.com.br/wp-content/uploads/2021/08/crachapvc.png");
 }
 main .servicos .areaProdutos .produto .produto3 {
   background-image: url("https://images.tcdn.com.br/img/img_prod/965264/banner_com_bastao_e_corda_vertical_181_1_f6c82ffb7f496c410668a9ea8b4197bc.png");
