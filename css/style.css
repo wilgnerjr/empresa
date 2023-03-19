@@ -226,12 +226,66 @@ main .servicos .areaProdutos {
   align-items: center;
   justify-content: center;
 }
-main .servicos .produto {
+main .servicos .areaProdutos .produto {
   width: 100px;
   height: 100px;
   border-radius: 8px;
-  background-color: blue;
+  background-color: transparent;
   color: red;
+  display: flex;
+  flex-direction: column;
+}
+main .servicos .areaProdutos .produto label {
+  font-size: small;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 1px;
+}
+main .servicos .areaProdutos .produto div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: url("https://ideiagraficaebrindes.com.br/wp-content/uploads/2021/08/crachapvc.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main .servicos .areaProdutos .produto .produto1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: url("https://cdn.atualcard.com.br/arquivos/menu/normais/cartao-de-visita-250g-487x296-.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main .servicos .areaProdutos .produto .produto3 {
+  background-image: url("https://images.tcdn.com.br/img/img_prod/965264/banner_com_bastao_e_corda_vertical_181_1_f6c82ffb7f496c410668a9ea8b4197bc.png");
+}
+main .servicos .areaProdutos .produto .produto4 {
+  background-image: url("https://dataphoto.com.br/wp-content/uploads/2019/03/000000078.png");
+}
+main .servicos .areaProdutos .produto .produto5 {
+  background-image: url("https://static3.tcdn.com.br/img/img_prod/586385/carimbo_autotintado_printy_4910_trodat_12323_1_20200714153224.png");
+}
+main .servicos .areaProdutos .produto .produto6 {
+  background-image: url("https://www.prolam.com.br/wp-content/uploads/2020/11/prolam-polaseal-1.png");
+}
+main .servicos .areaProdutos .produto .produto7 {
+  background-image: url("https://e7.pngegg.com/pngimages/548/857/png-clipart-cut-copy-and-paste-computer-icons-document-copying-android-android-angle-text.png");
+}
+main .servicos .areaProdutos .produto .produto8 {
+  background-image: url("https://www.deskshare.com/images/OverviewPages/psp/ComboPackshot-New.jpg");
+}
+main .servicos .areaProdutos .produto .produto9 {
+  background-image: url("https://static.vhsys.com/vh-drive/produtos/35727545/PLOTAGEM_A0_d3d172e.png");
+}
+main .servicos .areaProdutos .produto .produto10 {
+  background-image: url("https://mmcanecas.com/wp-content/uploads/2020/08/SUA-ARTE-VAI-AQUI.png");
 }
 main .contato {
   background-color: #fff;
@@ -361,5 +415,9 @@ footer p {
   }
   main .servicos .areaProdutos {
     max-width: 500px;
+  }
+  main .servicos .areaProdutos .produto {
+    width: 128px;
+    height: 128px;
   }
 }/*# sourceMappingURL=style.css.map */
