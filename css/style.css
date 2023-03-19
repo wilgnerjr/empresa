@@ -43,23 +43,23 @@ header .navigation {
   box-shadow: 0px 0px 10px #000;
   opacity: 1;
 }
-header .navigation .estadoAberto {
+header .navigation .aberto {
   color: green;
   background-color: #fff;
   border: green;
 }
-header .navigation .estadoFechado {
+header .navigation .fechado {
   color: red;
   background-color: #fff;
   border: red;
 }
-header .navigation .teste {
+header .navigation .horarioDeFuncionamento {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-header .navigation .teste p {
+header .navigation .horarioDeFuncionamento p {
   text-align: center;
   font-size: 0.6rem;
 }
@@ -296,7 +296,7 @@ footer p {
     padding: 18px 20px;
     height: 80px;
   }
-  header .navigation .teste p {
+  header .navigation .horarioDeFuncionamento p {
     display: none;
   }
   header .navigation ul li a {
